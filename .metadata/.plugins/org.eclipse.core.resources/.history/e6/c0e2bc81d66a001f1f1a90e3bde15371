@@ -1,0 +1,5 @@
+package vn.HuuTho.Models;
+
+public class UserModel {
+
+}

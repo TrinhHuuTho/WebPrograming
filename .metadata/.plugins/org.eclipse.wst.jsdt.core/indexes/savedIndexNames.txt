@@ -1,0 +1,2 @@
+INDEX VERSION 1.4+E:\LTWeb_HK1_24-25\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+1222784849.index

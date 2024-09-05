@@ -1,0 +1,5 @@
+package vn.HuuTho.Dao.Impl;
+
+public class UserDaoImpl {
+
+}
