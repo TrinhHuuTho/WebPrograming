@@ -63,6 +63,7 @@ public class UserModel implements Serializable {
 	public String getFullname() {
 		return fullname;
 	}
+	
 	private void setFullname(String fullname) {
 		// TODO Auto-generated method stub
 		this.fullname = fullname;
