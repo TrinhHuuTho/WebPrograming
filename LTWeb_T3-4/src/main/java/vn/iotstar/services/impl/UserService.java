@@ -25,4 +25,10 @@ public class UserService implements IUserService{
 		return userDao.findByUserName(username);
 	}
 
+	@Override
+	public void insert(UserModel newuser) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

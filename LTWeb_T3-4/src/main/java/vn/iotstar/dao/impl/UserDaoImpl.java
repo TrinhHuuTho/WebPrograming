@@ -137,16 +137,16 @@ public class UserDaoImpl extends DBConnectSQLServer implements IUserDao {
 //	    		"0123456789", 2, 
 //	    		new java.sql.Date(System.currentTimeMillis())));
 //		
-		// findAll
-		List<UserModel> list = userDao.findAll();
-		if (!list.isEmpty()) {
-			System.out.println("Users List:");
-			for (UserModel user : list) {
-				System.out.println(user);
-			}
-		} else {
-			System.out.println("No users found.");
-		}
+//		// findAll
+//		List<UserModel> list = userDao.findAll();
+//		if (!list.isEmpty()) {
+//			System.out.println("Users List:");
+//			for (UserModel user : list) {
+//				System.out.println(user);
+//			}
+//		} else {
+//			System.out.println("No users found.");
+//		}
 //
 //		// findById
 //		int testId = 3;
