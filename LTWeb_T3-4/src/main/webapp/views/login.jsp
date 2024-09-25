@@ -7,11 +7,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Login</title>
 </head>
 <body>
 	<form action="/LTWeb_T3-4/login" method="post">
-		<h2>Tạo tài khoản mới</h2>
+		<h2>Login</h2>
 		<c:if test="${alert !=null}">
 			<h3 class="alert alert danger">${alert}</h3>
 		</c:if>
@@ -28,7 +28,7 @@
 			<label class="input login-input"> 
 			<div class="input-group">
 				<span class="input-group-addon"><i class="fa fa-user"></i></span>
-				<input type="text" placeholder="Mật khẩu" name="password"
+				<input type="password" placeholder="Mật khẩu" name="password"
 					class="form-control">
 				</div>
 			</label>

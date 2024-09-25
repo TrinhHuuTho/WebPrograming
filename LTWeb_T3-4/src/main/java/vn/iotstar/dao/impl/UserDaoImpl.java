@@ -1,10 +1,8 @@
 package vn.iotstar.dao.impl;
 
-import java.lang.classfile.TypeAnnotation.ThrowsTarget;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,19 +22,12 @@ public class UserDaoImpl extends DBConnectSQLServer implements IUserDao {
 		List<UserModel> list = new ArrayList<UserModel>();
 		try {
 			conn = new DBConnectSQLServer().getConnection();
-			ps = conn.prepareStatement(sql);			
+			ps = conn.prepareStatement(sql);
 			rs = ps.executeQuery();
-			while (rs.next()) {						
-				list.add(new UserModel(
-					rs.getInt("id"),				
-					rs.getString("username"),
-					rs.getString("password"),
-					rs.getString("images"),
-					rs.getString("fullname"),
-					rs.getString("email"),								
-					rs.getString("phone"),
-					rs.getInt("roleid"),
-					rs.getDate("createDate")));				
+			while (rs.next()) {
+				list.add(new UserModel(rs.getInt("id"), rs.getString("username"), rs.getString("password"),
+						rs.getString("images"), rs.getString("fullname"), rs.getString("email"), rs.getString("phone"),
+						rs.getInt("roleid"), rs.getDate("createDate")));
 			}
 			return list;
 		} catch (Exception e) {
@@ -73,35 +64,30 @@ public class UserDaoImpl extends DBConnectSQLServer implements IUserDao {
 	}
 
 	@Override
-	public void insert(UserModel user){
+	public void insert(UserModel user) {
 
-		String sql = "INSERT INTO GetUser(id, username, password, images, fullname, email, phone, roleid, createDate) VALUES (?, ?, ?, ?, ?,?,?,?,?)";
-			
+		String sql = "INSERT INTO GetUser(email, username, fullname, password, images, roleid, phone, createDate) VALUES (1,?,?,?,'',1,'','')";
 		try {
-			conn = new DBConnectSQLServer().getConnection(); //kết nối database 
-			ps = conn.prepareStatement(sql);//ném câu sql vào cho thực thi
-			
-			 ps.setInt(1, user.getId());
-		        ps.setString(2, user.getUsername());
-		        ps.setString(3, user.getPassword());
-		        ps.setString(4, user.getImages());
-		        ps.setString(5, user.getFullname());
-		        ps.setString(6, user.getEmail());
-		        ps.setString(7, user.getPhone());
-		        ps.setInt(8, user.getRoleid());
-		        ps.setDate(9, user.getCreatedate());
-			
+			conn = new DBConnectSQLServer().getConnection();
+			ps = conn.prepareStatement(sql);
+			// ps.setString(1, user.getEmail());
+			ps.setString(1, user.getUsername());
+			ps.setString(2, user.getFullname());
+			ps.setString(3, user.getPassword());
+			// ps.setString(5, user.getImages());
+			// ps.setInt(6, user.getRoleid());
+			// ps.setString(7, user.getPhone());
+			// ps.setDate(8, user.getCreatedate());
 			ps.executeUpdate();
-			
-		} catch (SQLException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
-		} 
-		
+		}
 	}
 
 	public UserModel findByUserName(String username) {
+
 		String sql = "SELECT * FROM GetUser WHERE username = ? ";
-		
+
 		try {
 			conn = new DBConnectSQLServer().getConnection();
 			ps = conn.prepareStatement(sql);
@@ -125,28 +111,68 @@ public class UserDaoImpl extends DBConnectSQLServer implements IUserDao {
 		}
 		return null;
 	}
+
+	@Override
+	public UserModel findByEmail(String email) {
+        String sql = "SELECT * FROM GetUser WHERE email = ?";
+
+        try {
+            conn = new DBConnectSQLServer().getConnection();
+            ps = conn.prepareStatement(sql);
+            ps.setString(1, email);
+            rs = ps.executeQuery();
+            if (rs.next()) {
+                return new UserModel(
+                    rs.getInt("id"),
+                    rs.getString("username"),
+                    rs.getString("password"),
+                    rs.getString("images"),
+                    rs.getString("fullname"),
+                    rs.getString("email"),
+                    rs.getString("phone"),
+                    rs.getInt("roleid"),
+                    rs.getDate("createDate")
+                );
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+	
+	@Override
+	public void resetPassword(String email, String newPassword) {
+		 
+		        String sql = "UPDATE GetUser SET password = ? WHERE email = ?";
+		        try {
+		            conn = new DBConnectSQLServer().getConnection();
+		            ps = conn.prepareStatement(sql);
+		            ps.setString(1, newPassword);
+		            ps.setString(2, email);
+		            ps.executeUpdate();
+		        } catch (Exception e) {
+		            e.printStackTrace();
+		        }		    	
+	}
 	
 	public static void main(String[] args) {
 
 		IUserDao userDao = new UserDaoImpl();
 
 //		// Insert a new user
-//	    userDao.insert(new UserModel(4,
-//	    		"Thọ", "2508", "qwerty",
-//	    		"Trịnh Hửu Thọ", "aido@gmail.com",
-//	    		"0123456789", 2, 
-//	    		new java.sql.Date(System.currentTimeMillis())));
-//		
-//		// findAll
-//		List<UserModel> list = userDao.findAll();
-//		if (!list.isEmpty()) {
-//			System.out.println("Users List:");
-//			for (UserModel user : list) {
-//				System.out.println(user);
-//			}
-//		} else {
-//			System.out.println("No users found.");
-//		}
+//		userDao.insert(new UserModel(0, "Thọ", "2508", "qwerty", "Trịnh Hửu Thọ", "aido@gmail.com", "0123456789", 2,
+//				new java.sql.Date(System.currentTimeMillis())));
+//
+		// findAll
+		List<UserModel> list = userDao.findAll();
+		if (!list.isEmpty()) {
+			System.out.println("Users List:");
+			for (UserModel user : list) {
+				System.out.println(user);
+			}
+		} else {
+			System.out.println("No users found.");
+		}
 //
 //		// findById
 //		int testId = 3;
@@ -156,7 +182,7 @@ public class UserDaoImpl extends DBConnectSQLServer implements IUserDao {
 //		} else {
 //			System.out.println("\nUser with ID " + testId + " not found.");
 //		}
-//
+
 //		// findByUserName
 //		String Username = "Tho";
 //		UserModel userByUsername = userDao.findByUserName(Username);
@@ -165,7 +191,5 @@ public class UserDaoImpl extends DBConnectSQLServer implements IUserDao {
 //		} else {
 //			System.out.println("\nUser with username '" + Username + "' not found.");
 //		}
-
 	}
-
 }
