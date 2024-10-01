@@ -65,24 +65,32 @@ public class UserDaoImpl extends DBConnectSQLServer implements IUserDao {
 
 	@Override
 	public void insert(UserModel user) {
-
-		String sql = "INSERT INTO GetUser(email, username, fullname, password, images, roleid, phone, createDate) VALUES (1,?,?,?,'',1,'','')";
-		try {
-			conn = new DBConnectSQLServer().getConnection();
-			ps = conn.prepareStatement(sql);
-			// ps.setString(1, user.getEmail());
-			ps.setString(1, user.getUsername());
-			ps.setString(2, user.getFullname());
-			ps.setString(3, user.getPassword());
-			// ps.setString(5, user.getImages());
-			// ps.setInt(6, user.getRoleid());
-			// ps.setString(7, user.getPhone());
-			// ps.setDate(8, user.getCreatedate());
-			ps.executeUpdate();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+	    String sql = "INSERT INTO GetUser (email, username, fullname, password, images, roleid, phone, createDate) VALUES (?, ?, ?, ?, '', 1, '', GETDATE())";
+	    try {
+	        conn = new DBConnectSQLServer().getConnection();
+	        ps = conn.prepareStatement(sql);
+	        
+	        // Set the values based on the UserModel object
+	        ps.setString(1, user.getEmail());      // Email
+	        ps.setString(2, user.getUsername());   // Username
+	        ps.setString(3, user.getFullname());   // Fullname
+	        ps.setString(4, user.getPassword());   // Password
+	        
+	        // Execute the update
+	        ps.executeUpdate();
+	    } catch (Exception e) {
+	        e.printStackTrace();
+	    } finally {
+	        // Ensure that resources are closed properly
+	        try {
+	            if (ps != null) ps.close();
+	            if (conn != null) conn.close();
+	        } catch (Exception e) {
+	            e.printStackTrace();
+	        }
+	    }
 	}
+
 
 	public UserModel findByUserName(String username) {
 

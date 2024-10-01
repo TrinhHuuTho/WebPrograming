@@ -26,13 +26,14 @@ public class UserService implements IUserService {
 	}
 
 	@Override
-	public boolean register(String username, String password, String fullname) {
+	public boolean register(String username, String email, String password, String fullname) {
 		UserModel existingUser = userDao.findByUserName(username);
 		if (existingUser != null) {
 			return false; 
 		}
 		UserModel newUser = new UserModel();
 		newUser.setUsername(username);
+		newUser.setEmail(email);
 		newUser.setPassword(password); 
 		newUser.setFullname(fullname);
 		try {

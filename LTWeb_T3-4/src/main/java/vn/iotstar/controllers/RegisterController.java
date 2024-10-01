@@ -30,18 +30,19 @@ public class RegisterController extends HttpServlet {
 		req.setCharacterEncoding("UTF-8");
 
 		String username = req.getParameter("username");
+		String email = req.getParameter("email");
 		String password = req.getParameter("password");
 		String fullname = req.getParameter("fullname");
 		String alertMsg = "";
 
-		if (username.isEmpty() || password.isEmpty()) {
-			alertMsg = "Tài khoản hoặc mật khẩu không được rỗng";
+		if (username.isEmpty() || email.isEmpty() || password.isEmpty() || fullname.isEmpty()){
+			alertMsg = "Vui lòng điền đầy đủ thông tin";
 			req.setAttribute("alert", alertMsg);
 			req.getRequestDispatcher("/views/login.jsp").forward(req, resp);
 			return;
 		}
 
-		boolean isRegistered = userService.register(username, password, fullname);
+		boolean isRegistered = userService.register(username, email, password, fullname);
 
 		if (isRegistered) {
 			alertMsg = "Đăng ký thành công";

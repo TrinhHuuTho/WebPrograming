@@ -8,7 +8,7 @@ public interface IUserService {
 
 	UserModel findByUsername(String username);
 
-	boolean register(String username, String password, String fullname);
+	boolean register(String username, String email, String password, String fullname);
 
 
 }
