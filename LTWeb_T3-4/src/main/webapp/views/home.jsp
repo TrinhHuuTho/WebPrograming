@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ include file="/commons/taglib.jsp"%>
+<c:url value="/" var="URL"></c:url>
 
 	<!--Begin Slider-->
 	<%@ include file="/commons/web/slider.jsp"%>
@@ -14,10 +16,10 @@
 			<div>
 				<div class="product-item">
 					<div class="pi-img-wrapper">
-						<img src="${URL}/assets/frontend/pages/img/products/model1.jpg"
+						<img src="${URL}assets/frontend/pages/img/products/model1.jpg"
 							class="img-responsive" alt="Berry Lace Dress">
 						<div>
-							<a href="${URL}/assets/frontend/pages/img/products/model1.jpg"
+							<a href="${URL}assets/frontend/pages/img/products/model1.jpg"
 								class="btn btn-default fancybox-button">Zoom</a> <a
 								href="#product-pop-up"
 								class="btn btn-default fancybox-fast-view">View</a>
@@ -34,10 +36,10 @@
 			<div>
 				<div class="product-item">
 					<div class="pi-img-wrapper">
-						<img src="${URL}/assets/frontend/pages/img/products/model2.jpg"
+						<img src="${URL}assets/frontend/pages/img/products/model2.jpg"
 							class="img-responsive" alt="Berry Lace Dress">
 						<div>
-							<a href="${URL}/assets/frontend/pages/img/products/model2.jpg"
+							<a href="${URL}assets/frontend/pages/img/products/model2.jpg"
 								class="btn btn-default fancybox-button">Zoom</a> <a
 								href="#product-pop-up"
 								class="btn btn-default fancybox-fast-view">View</a>
@@ -53,10 +55,10 @@
 			<div>
 				<div class="product-item">
 					<div class="pi-img-wrapper">
-						<img src="${URL}/assets/frontend/pages/img/products/model6.jpg"
+						<img src="${URL}assets/frontend/pages/img/products/model6.jpg"
 							class="img-responsive" alt="Berry Lace Dress">
 						<div>
-							<a href="${URL}/assets/frontend/pages/img/products/model6.jpg"
+							<a href="${URL}assets/frontend/pages/img/products/model6.jpg"
 								class="btn btn-default fancybox-button">Zoom</a> <a
 								href="#product-pop-up"
 								class="btn btn-default fancybox-fast-view">View</a>
@@ -72,10 +74,10 @@
 			<div>
 				<div class="product-item">
 					<div class="pi-img-wrapper">
-						<img src="${URL}/assets/frontend/pages/img/products/model4.jpg"
+						<img src="${URL}assets/frontend/pages/img/products/model4.jpg"
 							class="img-responsive" alt="Berry Lace Dress">
 						<div>
-							<a href="${URL}/assets/frontend/pages/img/products/model4.jpg"
+							<a href="${URL}assets/frontend/pages/img/products/model4.jpg"
 								class="btn btn-default fancybox-button">Zoom</a> <a
 								href="#product-pop-up"
 								class="btn btn-default fancybox-fast-view">View</a>
@@ -92,10 +94,10 @@
 			<div>
 				<div class="product-item">
 					<div class="pi-img-wrapper">
-						<img src="${URL}/assets/frontend/pages/img/products/model5.jpg"
+						<img src="${URL}assets/frontend/pages/img/products/model5.jpg"
 							class="img-responsive" alt="Berry Lace Dress">
 						<div>
-							<a href="${URL}/assets/frontend/pages/img/products/model5.jpg"
+							<a href="${URL}assets/frontend/pages/img/products/model5.jpg"
 								class="btn btn-default fancybox-button">Zoom</a> <a
 								href="#product-pop-up"
 								class="btn btn-default fancybox-fast-view">View</a>
@@ -111,10 +113,10 @@
 			<div>
 				<div class="product-item">
 					<div class="pi-img-wrapper">
-						<img src="${URL}/assets/frontend/pages/img/products/model3.jpg"
+						<img src="${URL}assets/frontend/pages/img/products/model3.jpg"
 							class="img-responsive" alt="Berry Lace Dress">
 						<div>
-							<a href="${URL}/assets/frontend/pages/img/products/model3.jpg"
+							<a href="${URL}assets/frontend/pages/img/products/model3.jpg"
 								class="btn btn-default fancybox-button">Zoom</a> <a
 								href="#product-pop-up"
 								class="btn btn-default fancybox-fast-view">View</a>
@@ -130,10 +132,10 @@
 			<div>
 				<div class="product-item">
 					<div class="pi-img-wrapper">
-						<img src="${URL}/assets/frontend/pages/img/products/model7.jpg"
+						<img src="${URL}assets/frontend/pages/img/products/model7.jpg"
 							class="img-responsive" alt="Berry Lace Dress">
 						<div>
-							<a href="${URL}/assets/frontend/pages/img/products/model7.jpg"
+							<a href="${URL}assets/frontend/pages/img/products/model7.jpg"
 								class="btn btn-default fancybox-button">Zoom</a> <a
 								href="#product-pop-up"
 								class="btn btn-default fancybox-fast-view">View</a>
@@ -229,10 +231,10 @@
 			<div>
 				<div class="product-item">
 					<div class="pi-img-wrapper">
-						<img src="${URL}/assets/frontend/pages/img/products/k1.jpg"
+						<img src="${URL}assets/frontend/pages/img/products/k1.jpg"
 							class="img-responsive" alt="Berry Lace Dress">
 						<div>
-							<a href="${URL}/assets/frontend/pages/img/products/k1.jpg"
+							<a href="${URL}assets/frontend/pages/img/products/k1.jpg"
 								class="btn btn-default fancybox-button">Zoom</a> <a
 								href="#product-pop-up"
 								class="btn btn-default fancybox-fast-view">View</a>
@@ -249,10 +251,10 @@
 			<div>
 				<div class="product-item">
 					<div class="pi-img-wrapper">
-						<img src="${URL}/assets/frontend/pages/img/products/k2.jpg"
+						<img src="${URL}assets/frontend/pages/img/products/k2.jpg"
 							class="img-responsive" alt="Berry Lace Dress">
 						<div>
-							<a href="${URL}/assets/frontend/pages/img/products/k2.jpg"
+							<a href="${URL}assets/frontend/pages/img/products/k2.jpg"
 								class="btn btn-default fancybox-button">Zoom</a> <a
 								href="#product-pop-up"
 								class="btn btn-default fancybox-fast-view">View</a>
@@ -268,10 +270,10 @@
 			<div>
 				<div class="product-item">
 					<div class="pi-img-wrapper">
-						<img src="${URL}/assets/frontend/pages/img/products/k3.jpg"
+						<img src="${URL}assets/frontend/pages/img/products/k3.jpg"
 							class="img-responsive" alt="Berry Lace Dress">
 						<div>
-							<a href="${URL}/assets/frontend/pages/img/products/k3.jpg"
+							<a href="${URL}assets/frontend/pages/img/products/k3.jpg"
 								class="btn btn-default fancybox-button">Zoom</a> <a
 								href="#product-pop-up"
 								class="btn btn-default fancybox-fast-view">View</a>
@@ -287,10 +289,10 @@
 			<div>
 				<div class="product-item">
 					<div class="pi-img-wrapper">
-						<img src="${URL}/assets/frontend/pages/img/products/k4.jpg"
+						<img src="${URL}assets/frontend/pages/img/products/k4.jpg"
 							class="img-responsive" alt="Berry Lace Dress">
 						<div>
-							<a href="${URL}/assets/frontend/pages/img/products/k4.jpg"
+							<a href="${URL}assets/frontend/pages/img/products/k4.jpg"
 								class="btn btn-default fancybox-button">Zoom</a> <a
 								href="#product-pop-up"
 								class="btn btn-default fancybox-fast-view">View</a>
@@ -307,10 +309,10 @@
 			<div>
 				<div class="product-item">
 					<div class="pi-img-wrapper">
-						<img src="${URL}/assets/frontend/pages/img/products/k1.jpg"
+						<img src="${URL}assets/frontend/pages/img/products/k1.jpg"
 							class="img-responsive" alt="Berry Lace Dress">
 						<div>
-							<a href="${URL}/assets/frontend/pages/img/products/k1.jpg"
+							<a href="${URL}assets/frontend/pages/img/products/k1.jpg"
 								class="btn btn-default fancybox-button">Zoom</a> <a
 								href="#product-pop-up"
 								class="btn btn-default fancybox-fast-view">View</a>
@@ -326,10 +328,10 @@
 			<div>
 				<div class="product-item">
 					<div class="pi-img-wrapper">
-						<img src="${URL}/assets/frontend/pages/img/products/k2.jpg"
+						<img src="${URL}assets/frontend/pages/img/products/k2.jpg"
 							class="img-responsive" alt="Berry Lace Dress">
 						<div>
-							<a href="${URL}/assets/frontend/pages/img/products/k2.jpg"
+							<a href="${URL}assets/frontend/pages/img/products/k2.jpg"
 								class="btn btn-default fancybox-button">Zoom</a> <a
 								href="#product-pop-up"
 								class="btn btn-default fancybox-fast-view">View</a>
@@ -357,10 +359,10 @@
 			<div>
 				<div class="product-item">
 					<div class="pi-img-wrapper">
-						<img src="${URL}/assets/frontend/pages/img/products/k4.jpg"
+						<img src="${URL}assets/frontend/pages/img/products/k4.jpg"
 							class="img-responsive" alt="Berry Lace Dress">
 						<div>
-							<a href="${URL}/assets/frontend/pages/img/products/k4.jpg"
+							<a href="${URL}assets/frontend/pages/img/products/k4.jpg"
 								class="btn btn-default fancybox-button">Zoom</a> <a
 								href="#product-pop-up"
 								class="btn btn-default fancybox-fast-view">View</a>
@@ -376,10 +378,10 @@
 			<div>
 				<div class="product-item">
 					<div class="pi-img-wrapper">
-						<img src="${URL}/assets/frontend/pages/img/products/k2.jpg"
+						<img src="${URL}assets/frontend/pages/img/products/k2.jpg"
 							class="img-responsive" alt="Berry Lace Dress">
 						<div>
-							<a href="${URL}/assets/frontend/pages/img/products/k2.jpg"
+							<a href="${URL}assets/frontend/pages/img/products/k2.jpg"
 								class="btn btn-default fancybox-button">Zoom</a> <a
 								href="#product-pop-up"
 								class="btn btn-default fancybox-fast-view">View</a>
@@ -395,10 +397,10 @@
 			<div>
 				<div class="product-item">
 					<div class="pi-img-wrapper">
-						<img src="${URL}/assets/frontend/pages/img/products/k3.jpg"
+						<img src="${URL}assets/frontend/pages/img/products/k3.jpg"
 							class="img-responsive" alt="Berry Lace Dress">
 						<div>
-							<a href="${URL}/assets/frontend/pages/img/products/k3.jpg"
+							<a href="${URL}assets/frontend/pages/img/products/k3.jpg"
 								class="btn btn-default fancybox-button">Zoom</a> <a
 								href="#product-pop-up"
 								class="btn btn-default fancybox-fast-view">View</a>
@@ -414,10 +416,10 @@
 			<div>
 				<div class="product-item">
 					<div class="pi-img-wrapper">
-						<img src="${URL}/assets/frontend/pages/img/products/k1.jpg"
+						<img src="${URL}assets/frontend/pages/img/products/k1.jpg"
 							class="img-responsive" alt="Berry Lace Dress">
 						<div>
-							<a href="${URL}/assets/frontend/pages/img/products/k1.jpg"
+							<a href="${URL}assets/frontend/pages/img/products/k1.jpg"
 								class="btn btn-default fancybox-button">Zoom</a> <a
 								href="#product-pop-up"
 								class="btn btn-default fancybox-fast-view">View</a>
@@ -433,10 +435,10 @@
 			<div>
 				<div class="product-item">
 					<div class="pi-img-wrapper">
-						<img src="${URL}/assets/frontend/pages/img/products/k4.jpg"
+						<img src="${URL}assets/frontend/pages/img/products/k4.jpg"
 							class="img-responsive" alt="Berry Lace Dress">
 						<div>
-							<a href="${URL}/assets/frontend/pages/img/products/k4.jpg"
+							<a href="${URL}assets/frontend/pages/img/products/k4.jpg"
 								class="btn btn-default fancybox-button">Zoom</a> <a
 								href="#product-pop-up"
 								class="btn btn-default fancybox-fast-view">View</a>
@@ -452,10 +454,10 @@
 			<div>
 				<div class="product-item">
 					<div class="pi-img-wrapper">
-						<img src="${URL}/assets/frontend/pages/img/products/k3.jpg"
+						<img src="${URL}assets/frontend/pages/img/products/k3.jpg"
 							class="img-responsive" alt="Berry Lace Dress">
 						<div>
-							<a href="${URL}/assets/frontend/pages/img/products/k3.jpg"
+							<a href="${URL}assets/frontend/pages/img/products/k3.jpg"
 								class="btn btn-default fancybox-button">Zoom</a> <a
 								href="#product-pop-up"
 								class="btn btn-default fancybox-fast-view">View</a>
@@ -484,17 +486,17 @@
 				<div class="carousel-inner">
 					<div class="item active">
 						<img
-							src="${URL}/assets/frontend/pages/img/index-sliders/slide1.jpg"
+							src="${URL}assets/frontend/pages/img/index-sliders/slide1.jpg"
 							class="img-responsive" alt="Berry Lace Dress">
 					</div>
 					<div class="item">
 						<img
-							src="${URL}/assets/frontend/pages/img/index-sliders/slide2.jpg"
+							src="${URL}assets/frontend/pages/img/index-sliders/slide2.jpg"
 							class="img-responsive" alt="Berry Lace Dress">
 					</div>
 					<div class="item">
 						<img
-							src="${URL}/assets/frontend/pages/img/index-sliders/slide3.jpg"
+							src="${URL}assets/frontend/pages/img/index-sliders/slide3.jpg"
 							class="img-responsive" alt="Berry Lace Dress">
 					</div>
 				</div>
@@ -514,22 +516,23 @@
 <!-- End Steps -->
 
 <!-- PopUp View Product -->
-<!-- BEGIN fast view of a product -->
+<!-- BEGIN fast v
+iew of a product -->
 <div id="product-pop-up" style="display: none; width: 700px;">
 	<div class="product-page product-pop-up">
 		<div class="row">
 			<div class="col-md-6 col-sm-6 col-xs-3">
 				<div class="product-main-image">
-					<img src="${URL}/assets/frontend/pages/img/products/model7.jpg"
+					<img src="${URL}assets/frontend/pages/img/products/model7.jpg"
 						alt="Cool green dress with red bell" class="img-responsive">
 				</div>
 				<div class="product-other-images">
 					<a href="#" class="active"><img alt="Berry Lace Dress"
-						src="${URL}/assets/frontend/pages/img/products/model3.jpg"></a>
+						src="${URL}assets/frontend/pages/img/products/model3.jpg"></a>
 					<a href="#"><img alt="Berry Lace Dress"
-						src="${URL}/assets/frontend/pages/img/products/model4.jpg"></a>
+						src="${URL}assets/frontend/pages/img/products/model4.jpg"></a>
 					<a href="#"><img alt="Berry Lace Dress"
-						src="${URL}/assets/frontend/pages/img/products/model5.jpg"></a>
+						src="${URL}assets/frontend/pages/img/products/model5.jpg"></a>
 				</div>
 			</div>
 			<div class="col-md-6 col-sm-6 col-xs-9">

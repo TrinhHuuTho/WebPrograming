@@ -15,12 +15,14 @@
 						<h3 class="alert alert danger">${alert}</h3>
 					</c:if>
 					<form action="${pageContext.request.contextPath}/login" method="post" class="form-horizontal form-without-legend" role="form">
+                   
                     <div class="form-group">
                       <label for="email" class="col-lg-4 control-label">Username <span class="require">*</span></label>
                       <div class="col-lg-8">
                         <input type="text" class="form-control" id="username" name="username" required>
                       </div>
                     </div>
+                    
                     <div class="form-group">
                       <label for="password" class="col-lg-4 control-label">Password <span class="require">*</span></label>
                       <div class="col-lg-8">
@@ -29,16 +31,19 @@
 						</div>
                       </div>
                     </div>
+                    
                     <div class="row">
                       <div class="col-lg-8 col-md-offset-4 padding-left-0">
                         <a href="${pageContext.request.contextPath}/forgotpassword">Forget Password?</a>
                       </div>
                     </div>
+                    
                     <div class="row">
                       <div class="col-lg-8 col-md-offset-4 padding-left-0 padding-top-20">
                         <button type="submit" class="btn btn-primary">Login</button>
                       </div>
                     </div>
+                    
                     <div class="row">
                       <div class="col-lg-8 col-md-offset-4 padding-left-0 padding-top-10 padding-right-30">
                         <hr>

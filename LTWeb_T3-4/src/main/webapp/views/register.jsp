@@ -21,7 +21,7 @@
                 
                 <!-- Username Field -->
                 <div class="form-group">
-                    <label for="username" class="col-lg-4 control-label">Username</label>
+                    <label for="username" class="col-lg-4 control-label">Username <span class="require">*</span></label>
                     <div class="col-lg-8">
                         <input type="text" class="form-control" id="username" name="username" placeholder="Enter Username" required>
                     </div>
@@ -29,7 +29,7 @@
 
                 <!-- Email Field -->
                 <div class="form-group">
-                    <label for="email" class="col-lg-4 control-label">Email</label>
+                    <label for="email" class="col-lg-4 control-label">Email <span class="require">*</span></label>
                     <div class="col-lg-8">
                         <input type="email" class="form-control" id="email" name="email" placeholder="Enter Email" required>
                     </div>
@@ -37,7 +37,7 @@
 
                 <!-- Password Field -->
                 <div class="form-group">
-                    <label for="password" class="col-lg-4 control-label">Password</label>
+                    <label for="password" class="col-lg-4 control-label">Password <span class="require">*</span></label>
                     <div class="col-lg-8">
                         <input type="password" class="form-control" id="password" name="password" placeholder="Enter Password" required>
                     </div>
@@ -45,7 +45,7 @@
 
                 <!-- Fullname Field -->
                 <div class="form-group">
-                    <label for="fullname" class="col-lg-4 control-label">Fullname</label>
+                    <label for="fullname" class="col-lg-4 control-label">Fullname <span class="require">*</span></label>
                     <div class="col-lg-8">
                         <input type="text" class="form-control" id="fullname" name="fullname" placeholder="Enter Fullname" required>
                     </div>
